@@ -1,0 +1,116 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.card {
+  max-width: 573px;
+  max-height: 707px;
+  width: 100%;
+  height: 100%;
+  padding: 53px 25px 25px;
+  background-color: $grey;
+  border-radius: 30px;
+  font-family: $sfui-display;
+  //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__new {
+    padding: 5px 20px;
+    font-size: $md-font-size;
+    color: $white;
+    background: linear-gradient(261.65deg, #EFBB37 -3.95%, #CF9E1F 109.44%);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    padding: 12px;
+    border-radius: 50%;
+    background-color: $white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  &__border {
+    border-radius: 25px;
+  }
+
+  &__image {
+    max-width: 256px;
+    max-height: 261px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.product {
+  font-family: $sfui-display;
+
+  &__title {
+    padding: 25px 0 10px;
+    font-size: $xl-font-size;
+    line-height: 29px;
+    text-align: center;
+  }
+
+  &__description {
+    padding-bottom: 20px;
+    font-size: $lg-font-size;
+    line-height: 24px;
+  }
+
+  &__flex-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__select {
+    max-width: 258px;
+    max-height: 30px;
+    width: 100%;
+    height: 100%;
+    padding: 5px 15px;
+    font-size: $sm-font-size;
+    border-radius: 30px;
+    border: none;
+  }
+
+  &__price {
+    font-weight: bold;
+  }
+}
+
+.radio {
+  display: flex;
+  flex-direction: column;
+
+  &__button {
+    padding: 10px 0;
+  }
+
+  &__input {
+    width: 25px;
+    height: 25px;
+    margin-bottom: -5px;
+    margin-right: 4px;
+    box-sizing: border-box;
+    appearance: none;
+    background-color: $light-grey;
+    border: 3px solid $light-grey;
+    border-radius: 5px;
+  }
+
+  &__input:checked {
+    background-color: $yellow;
+  }
+
+  &__item{
+    font-weight: bold;
+    font-family: $sfui-display;
+  }
+}
