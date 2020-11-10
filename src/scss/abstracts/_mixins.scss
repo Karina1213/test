@@ -9,3 +9,9 @@
     @content;
   }
 }
+
+@mixin breakpointMin($size) {
+  @media only screen and (min-width: $size + px) {
+    @content;
+  }
+}

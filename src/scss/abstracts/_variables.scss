@@ -3,7 +3,10 @@ $sfui-display: 'SFUI-Display', sans-serif;
 
 $white: #ffffff;
 $black: #000000;
-$yellow: rgb(219, 175, 67);
+
+$yellow-gradient-active: linear-gradient(261.65deg, #f6dea9 -3.95%, #f6b60b 109.44%);
+$yellow-gradient: linear-gradient(261.65deg, #EFBB37 -3.95%, #CF9E1F 109.44%);
+$yellow-gradient-hover: linear-gradient(261.65deg, #EFBB37 -3.95%, #a47e13 109.44%);
 $light-grey: #eceff1;
 $grey: #F8FAFC;
 

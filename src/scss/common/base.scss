@@ -1,0 +1,30 @@
+@import "./src/scss/abstracts/mixins";
+
+.container {
+  padding: 107px 15px;
+}
+
+@include breakpointMin(576) {
+  .container {
+    max-width: 540px;
+    margin: auto;
+  }
+}
+
+@include breakpointMin(768) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@include breakpointMin(992) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@include breakpointMin(1987) {
+  .container {
+    max-width: 1787px;
+  }
+}
