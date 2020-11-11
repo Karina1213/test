@@ -3,22 +3,22 @@ class Cart {
         this.productsList = document.getElementById('productsList')
 
         this.json = [{
-            id:'1',
+            id: '1',
             image: 'img/1.png',
             title: 'Шампунь',
             description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.' +
                 ' Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
             price: ' 200грн'
         }, {
-            id:'2',
+            id: '2',
             image: 'img/2.jpg',
             title: 'Шампунь',
             description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.' +
                 ' Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
             price: ' 200грн'
         }, {
-            id:'3',
-            image: 'img/3.png',
+            id: '3',
+            image: 'img/3.jpg',
             title: 'Шампунь',
             description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.' +
                 ' Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
@@ -38,7 +38,9 @@ class Cart {
                             </div>
                         </div>
         
-                        <div id="icon" class="card__icon"></div>
+                        <div class="card__icon">
+                        <i class="fa fa-balance-scale" aria-hidden = 'true'></i>
+                        </div>
                     </header>
         
                     <article class="product">
@@ -48,16 +50,18 @@ class Cart {
                         </p>
         
                         <form class="product__form">
-        
                             <div class="product__flex-row">
-        
+
                                 <select class="product__select">
                                     <option class="product__option" selected disabled>Цвет</option>
                                     <option class="product__option" value='yellow'>Желтый</option>
                                     <option class="product__option" value='red'>Красный</option>
                                     <option class="product__option" value='green'>Зеленый</option>
+                                    <option class="product__option" value='yellow'>Желтый</option>
+                                    <option class="product__option" value='red'>Красный</option>
+                                    <option class="product__option" value='green'>Зеленый</option>
                                 </select>
-        
+   
                                 <span class="product__price"> ${data.price}</span>
                             </div>
         
@@ -80,13 +84,13 @@ class Cart {
         
                             <div class="buttons-block">
         
-                                <div class="counter" id="counter">
-                                    <input class="counter__button" type="button" id="buttonCountMinus" value="-">
-                                    <div id="buttonCountNumber"> 1</div>
-                                    <input class="counter__button" type="button" id="buttonCountPlus" value="+">
+                                <div class="counter">
+                                    <input class="counter__button button-count-minus" type="button" value="-">
+                                    <div class="count-number" data-id=${data.id}> 1</div>
+                                    <input class="counter__button button-count-plus" type="button" value="+">
                                 </div>
         
-                                <button id="buyButton" class="button button--hovered product__button" type="submit"
+                                <button class="button button--hovered product__button" type="submit"
                                         value="submit">Купить
                                 </button>
                             </div>
@@ -101,49 +105,24 @@ class Cart {
 const cart = new Cart()
 cart.render()
 
-const count = document.getElementById("buttonCountNumber");
+const productsList = document.getElementById('productsList')
 
-function countPlus() {
-    const countPlus = count.innerHTML;
-    if (+countPlus < 5) {
-        count.innerHTML++;
+productsList.addEventListener('click', (e) => {
+    const target = e.target;
+    const count = target.parentNode.querySelector(".count-number");
+
+    if (target.classList.contains('button-count-plus')) {
+        const countPlus = count.innerHTML;
+        if (+countPlus < 5) {
+            count.innerHTML++;
+        }
     }
-};
 
-function countMinus() {
-    const countMinus = count.innerHTML;
-    if (+countMinus >= 2) {
-        count.innerHTML--;
+    if (target.classList.contains('button-count-minus')) {
+        const countMinus = count.innerHTML;
+        if (+countMinus >= 2) {
+            count.innerHTML--;
+        }
     }
-};
-
-function setOnClickHandlerByElemId(id, callback) {
-    const elem = document.getElementById(id);
-    elem.addEventListener('click', callback)
-}
-
-setOnClickHandlerByElemId("buttonCountPlus", countPlus)
-setOnClickHandlerByElemId("buttonCountMinus", countMinus)
-
-const faIcon = document.createElement('i');
-
-function createIcon(id, iconAttr) {
-    const icon = document.getElementById(id);
-
-    faIcon.classList.add('fa', iconAttr);
-    faIcon.setAttribute('aria-hidden', 'true')
-    icon.appendChild(faIcon)
-}
-
-createIcon('icon', 'fa-balance-scale')
-
-function changeIcon(e) {
-    e.preventDefault();
-    faIcon.className = 'fa fa-check';
-    faIcon.style.color = 'green'
-}
-
-setOnClickHandlerByElemId('buyButton', changeIcon)
-
-
+})
 
