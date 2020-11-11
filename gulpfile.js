@@ -15,6 +15,6 @@ $.path.tasks.forEach(function (taskPath) {
 });
 
 $.gulp.task('default', $.gulp.series(
-	    $.gulp.parallel('html', 'sass', 'scripts', 'fonts', 'img', 'svg'),
+	    $.gulp.parallel('html', 'sass', 'scripts', 'fonts', 'img'),
 		$.gulp.parallel('watch', 'serve')
 ));

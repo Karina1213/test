@@ -1,6 +1,11 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
 
+.products-list {
+  display: flex;
+  flex-direction: row;
+}
+
 .card {
   max-width: 573px;
   max-height: 707px;
@@ -10,7 +15,7 @@
   background-color: $grey;
   border-radius: 30px;
   font-family: $sfui-display;
-  //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
 
   &__header {
     display: flex;
@@ -34,12 +39,12 @@
     border-radius: 25px;
   }
 
-  &__image-wrapper{
+  &__image-wrapper {
     max-width: 256px;
     max-height: 261px;
     width: 100%;
     height: 100%;
-    overflow:hidden
+    overflow: hidden
   }
 
   &__image {
@@ -49,7 +54,7 @@
     height: 100%;
     transition: all 1s ease-out;
 
-    &:hover{
+    &:hover {
       transform: scale(1.8);
       cursor: pointer;
     }

@@ -18,82 +18,14 @@
 
 <body>
 
-<section class="shampoo-section">
+<section class="products-section">
     <div class="container">
-        <div class="card">
 
-            <header class="card__header">
-                <span class="card__new button">new</span>
+        <div id="productsList" class="products-list"></div>
 
-                <div class="card__border">
-                    <div class="card__image-wrapper">
-                        <img class="card__image" src="img/1.png">
-                    </div>
-                </div>
-
-                <div id="icon" class="card__icon">
-                    <!--                <i class="fa fa-balance-scale" aria-hidden="true"></i>-->
-                </div>
-            </header>
-
-            <article class="product">
-                <h3 class="product__title">Шампунь</h3>
-                <p class="product__description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                </p>
-
-                <form class="product__form">
-
-                    <div class="product__flex-row">
-
-                        <select class="product__select">
-                            <option class="product__option" selected disabled>Цвет</option>
-                            <option class="product__option" value='yellow'>Желтый</option>
-                            <option class="product__option" value='red'>Красный</option>
-                            <option class="product__option" value='green'>Зеленый</option>
-                        </select>
-
-                        <span class="product__price"> 200грн</span>
-                    </div>
-
-                    <div class="radio">
-                        <label class="radio__button">
-                            <input class="radio__input" name="volume" type="radio" value="firstVolume" checked>
-                            <span class="radio__item">100мл</span>
-                        </label>
-
-                        <label class="radio__button">
-                            <input class="radio__input" name="volume" type="radio" value="secondVolume">
-                            <span class="radio__item">200мл</span>
-                        </label>
-
-                        <label class="radio__button">
-                            <input class="radio__input" name="volume" type="radio" value="thirdVolume">
-                            <span class="radio__item">300мл</span>
-                        </label>
-                    </div>
-
-                    <div class="buttons-block">
-
-                        <div class="counter" id="counter">
-                            <input class="counter__button" type="button" id="buttonCountMinus" value="-">
-                            <div id="buttonCountNumber"> 1</div>
-                            <input class="counter__button" type="button" id="buttonCountPlus" value="+">
-                        </div>
-
-                        <button id="buyButton" class="button button--hovered product__button" type="submit"
-                                value="submit">Купить
-                        </button>
-                    </div>
-                </form>
-
-            </article>
-        </div>
     </div>
 </section>
 
-<script src="../js/main.js"></script>
+<script  type="module" src="../js/main.js"></script>
 </body>
 </html>
