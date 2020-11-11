@@ -57,9 +57,6 @@ class Cart {
                                     <option class="product__option" value='yellow'>Желтый</option>
                                     <option class="product__option" value='red'>Красный</option>
                                     <option class="product__option" value='green'>Зеленый</option>
-                                    <option class="product__option" value='yellow'>Желтый</option>
-                                    <option class="product__option" value='red'>Красный</option>
-                                    <option class="product__option" value='green'>Зеленый</option>
                                 </select>
    
                                 <span class="product__price"> ${data.price}</span>
