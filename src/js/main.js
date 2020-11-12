@@ -1,4 +1,4 @@
-class Cart {
+class Card {
     constructor() {
         this.productsList = document.getElementById('productsList')
 
@@ -27,7 +27,7 @@ class Cart {
     }
 
     render() {
-        this.renderCart = this.json.map((data) => {
+        this.renderCard = this.json.map((data) => {
             return `<div class="card">
                     <header class="card__header">
                         <span class="card__new button">new</span>
@@ -83,7 +83,7 @@ class Cart {
         
                                 <div class="counter">
                                     <input class="counter__button button-count-minus" type="button" value="-">
-                                    <div class="count-number" data-id=${data.id}> 1</div>
+                                    <div class="count-number"> 1</div>
                                     <input class="counter__button button-count-plus" type="button" value="+">
                                 </div>
         
@@ -95,12 +95,12 @@ class Cart {
                     </article>
                 </div>`
         })
-        this.productsList.innerHTML = `${this.renderCart}`;
+        this.productsList.innerHTML = `${this.renderCard}`;
     }
 }
 
-const cart = new Cart()
-cart.render()
+const card = new Card()
+card.render()
 
 const productsList = document.getElementById('productsList')
 
@@ -122,4 +122,3 @@ productsList.addEventListener('click', (e) => {
         }
     }
 })
-
