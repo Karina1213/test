@@ -8,7 +8,7 @@ module.exports = function () {
 					browsers: ['last 10 versions']
 				}))
 				.on('error', $.gp.notify.onError({
-					title: 'Dibil, error v scss !'
+					title: 'error in scss !'
 				}))
 				.pipe($.gp.csso())
 				.pipe($.gp.sourcemaps.write())
